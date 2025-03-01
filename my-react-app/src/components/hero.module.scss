@@ -1,15 +1,36 @@
+@import '../styles/settings';
+
 .hero {
-    background-image: url('path/to/your/image.jpg');
+    background-image: url('../../public/backgroundHero.png');
     background-size: cover;
     background-position: center;
     height: 100vh; /* Hauteur de la section */
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white; /* Couleur du texte */
-  }
+   // color: white; /* Couleur du texte */
+    width: 100%;
+    height: 223px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    opacity: 0.6;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5); 
+    mix-blend-mode: darken;
+ 
+    &__h1 {
+        font-size: 48px; /* Taille du texte */
+        text-align: center;
+        color: #FFF;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000;
+        font-family: Montserrat;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 142.6%; /* 68.448px */
+    }
+}
   
-  .catchphrase {
-    font-size: 48px; /* Taille du texte */
-    text-align: center;
-  }
+  

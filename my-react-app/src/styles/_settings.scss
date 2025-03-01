@@ -1,7 +1,22 @@
+// colors
 $primary-color: #FF6060;
 $secondary-color: #FFFFFF;
 $black: #000;
 $cards-container-background-color: #F6F6F6;
+
+// font-weight
+$font-weight-regular: 500;
+$font-weight-bold: 700;
+
+// font-size
+$font-size-h1: 48px;
+$font-size-h2: 36px;
+$font-size-h3: 24px;
+$font-size-h4: 18px;
+$font-size-h5: 14px;
+$font-size-h6: 12px;
+$font-size-body: 10px;
+
 
 @mixin verticalCenter {
   display: flex;

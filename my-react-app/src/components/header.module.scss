@@ -4,17 +4,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding-top: 15px;
     background-color: $secondary-color;
     color: $secondary-color;
 
     &__logoHeader {
-        height: 50px;
+        height: 68px;
+        margin-bottom: 50px;
     }
 
     &__navigation {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     &__list {
@@ -32,9 +33,10 @@
 
     &__link {
         text-decoration: none;
-        color: $secondary-color;
-        font-weight: bold;
+        color: $black;
+        //font-weight: bold;
         transition: color 0.3s;
+        margin-left: 57px;
 
         &:hover {
             color: $black;
@@ -42,7 +44,7 @@
 
         &--active {
             color: $black;
-            border-bottom: 2px solid $black;
+            border-bottom: 1px solid $black;
         }
     }
 }

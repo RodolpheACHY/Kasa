@@ -1,28 +1,33 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import styles from "./header.module.scss";
 
 const Navigation = () => {
   return (
-    <nav className="header__navigation">
-      <ul className="header__list">
-        <li className="header__item">
+    <nav className={styles.header__navigation}>
+      <ul className={styles.header__list}>
+        <li className={styles.header__item}>
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive ? "header__link header__link--active" : "header__link"
+              isActive
+                ? `${styles.header__link} ${styles["header__link--active"]}`
+                : styles.header__link
             }
           >
             Accueil
           </NavLink>
         </li>
-        <li className="header__item">
+        <li className={styles.header__item}>
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              isActive ? "header__link header__link--active" : "header__link"
+              isActive
+                ? `${styles.header__link} ${styles["header__link--active"]}`
+                : styles.header__link
             }
           >
-            À propos
+            À Propos
           </NavLink>
         </li>
       </ul>
