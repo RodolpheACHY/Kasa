@@ -1,0 +1,10 @@
+$primary-color: #FF6060;
+$secondary-color: #FFFFFF;
+$black: #000;
+$cards-container-background-color: #F6F6F6;
+
+@mixin verticalCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
