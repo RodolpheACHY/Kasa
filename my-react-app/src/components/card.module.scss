@@ -1,44 +1,50 @@
+@import '../styles/_settings.scss';
+
 .card {
-    position: relative;
-    height: 100px;
-    width: 160px;
-    border-radius: 4px;
-    transition: 0.3s;
-  
-    h2 {
-      font-size: 1rem;
-    }
-  
-    &:hover {
-      transform: scale(1.2);
-      z-index: 2;
-    }
-  
-    &:hover .infos {
-      opacity: 1;
-      transform: scaleY(1);
-    }
-  
-    .infos {
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: rgba(0, 0, 0, 0.7);
-      color: $white;
-      height: 100%;
-      width: 100%;
-      display: grid;
-      align-items: center;
-      justify-content: center;
-      border-radius: 10px;
-      opacity: 0;
-      transform: scaleY(0);
-      transition: 0.3s;
-    }
-    img {
-      height: 100px;
-      width: 160px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
+  position: relative;
+  height: 340px;
+  width: 340px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+  width: 340px;
+  height: 340px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(10, 10, 10, 0.00) 42%, rgba(4, 4, 4, 0.20) 99.99%, rgba(0, 0, 0, 0.50) 100%);
+
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
   }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    opacity: 0;
+    transform: scaleY(0);
+    transition: 0.3s;
+    font-size: 1rem;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+    z-index: 2;
+  }
+
+  &:hover .card__title {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
