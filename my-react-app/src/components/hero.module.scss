@@ -8,23 +8,23 @@
     justify-content: center;
     align-items: center;
    // color: white; /* Couleur du texte */
-    width: 100%;
+    width: 90%;
     height: 223px;
     flex-shrink: 0;
     border-radius: 25px;
     margin-bottom: 43px;
+    margin-left: auto;
+    margin-right: auto;
  
     &__h1 {
         font-size: 48px; /* Taille du texte */
         text-align: center;
         color: #FFF;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: #000;
         font-size: 48px;
         font-style: normal;
         font-weight: 700;
         line-height: 142.6%; /* 68.448px */
+        text-shadow: -1px -1px 0px #000000, 1px -1px 0px #000000, -1px 1px 0px #000000, 1px 1px 0px #000000;
     }
 }
   

@@ -7,22 +7,23 @@ import locationsData from "../data/logements.json"; // Vérifie que le JSON est 
 const Locations = () => {
   const [locations, setLocations] = useState([]);
 
-  /*useEffect(() => {
+  useEffect(() => {
     axios
       .get("/logements.json")
       .then((response) => setLocations(response.data))
       .catch((error) =>
         console.error("Erreur lors de la récupération :", error)
       );
-  }, []); */
-
-  useEffect(() => {
-    setLocations(locationsData); // Charge les données
   }, []);
 
+  /*
+  useEffect(() => {
+    setLocations(locationsData); // Charge les données
+  }, []); */
+
   return (
-    <div>
-      <ul className={styles.locations}>
+    <div className={styles.container_locations}>
+      <ul className={styles.container_locations__locations}>
         {locations.map((location) => (
           <Card key={location.id} location={location} /> // pour passer `location` en prop
         ))}
