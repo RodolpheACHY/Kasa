@@ -17,7 +17,7 @@ const Locations = () => {
   }, []);
 
   /*
-  useEffect(() => {
+  useEffect(() => {   //marche aussi 
     setLocations(locationsData); // Charge les données
   }, []); */
 
