@@ -1,0 +1,66 @@
+@use '../styles/_settings.scss';
+
+.carrousel {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    border-radius: 10px;
+  }
+  
+  .carrousel__list {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .slide__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .carrousel__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 2rem;
+    border-radius: 50%;
+    transition: 0.3s;
+  
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+  
+  .carrousel__arrow:first-of-type {
+    left: 10px;
+  }
+  
+  .carrousel__arrow:last-of-type {
+    right: 10px;
+  }
