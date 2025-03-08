@@ -1,20 +1,23 @@
-import { useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Carrousel from "./Carrousel";
 
 const LocationDetails = () => {
-  const [searchParams] = useSearchParams();
-  const id = searchParams.get("id"); // Récupère l'ID dans l'URL
+  const { id } = useParams(); // Récupère l'ID dans l'URL
   console.log("ID du logement :", id);
   const [location, setLocation] = useState(null);
+  const [pictures, setPictures] = useState([]);
 
   useEffect(() => {
     axios
       .get("/logements.json") // Charge tous les logements
       .then((response) => {
-        //const locationFound = response.data.find((l) => l.id === id); // Cherche le logement par ID
         const location = response.data.find((l) => l.id === id); // Cherche le logement par ID
         setLocation(location);
+        if (location && location.pictures) {
+            setPictures(location.pictures)
+        }
       })
       .catch((error) => console.error("Erreur de chargement :", error));
   }, [id]);
@@ -23,6 +26,7 @@ const LocationDetails = () => {
 
   return (
     <div>
+      <Carrousel pictures={pictures} />
       <h1>Détails de la location {id}</h1>
       <img src={location.cover} alt={`Photo de ${location.title}`} />
       <p>{location.description}</p>

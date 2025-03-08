@@ -24,7 +24,7 @@ const Locations = () => {
   }, []); */
 
   const handleClick = (id) => {
-    navigate(`/rental/:${id}`); // ✅ Redirige vers la page de détails avec l'ID du logement
+    navigate(`/rental/${id}`); // Redirige vers la page de détails avec l'ID du logement
   };
 
   return (
