@@ -1,10 +1,15 @@
 import { useState } from "react";
 import styles from "./carrousel.module.scss"; // Import des styles
 import PropTypes from "prop-types"; // Import PropTypes
+import { useParams } from "react-router-dom";
 
-const Carrousel = ({ pictures }) => {
+const Carrousel = ({ data }) => {
   // On récupère les images en prop
+  const { id } = useParams();
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const location = data.find((logement) => logement.id === id);
+  const pictures = location?.pictures || [];
 
   // Vérifier qu'il y a des images pour éviter les erreurs
   if (!pictures || pictures.length === 0) {
@@ -53,7 +58,8 @@ const Carrousel = ({ pictures }) => {
 
 // Ajout de PropTypes pour éviter l'erreur ESLint
 Carrousel.propTypes = {
-  pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
+  //pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
+  data: PropTypes.array.isRequired,
 };
 
 export default Carrousel;

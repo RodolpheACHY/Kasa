@@ -3,18 +3,22 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Locations from "../components/Locations";
 import Footer from "../components/Footer";
+import PropTypes from "prop-types";
 
-const HomePage = () => {
+const HomePage = ({data}) => {
   return (
     <div>
       <Header />
       <Hero />
       <main>
-        <Locations />
+        <Locations locations={data} />
       </main>
       <Footer />
     </div>
   );
 };
 
+HomePage.propTypes = {
+    data: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 export default HomePage;

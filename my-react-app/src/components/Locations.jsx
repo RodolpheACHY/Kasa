@@ -1,22 +1,23 @@
-import { useState, useEffect } from "react";
+//import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 import Card from "./Card";
 import styles from "./locations.module.scss"; // pour ajouter un style au container
 // import locationsData from "../data/logements.json";  Vérifie que le JSON est bien importé
 
-const Locations = () => {
-  const [locations, setLocations] = useState([]);
+const Locations = ({ locations }) => {
+  //const [locations, setLocations] = useState([]);
   const navigate = useNavigate(); // Permet de rediriger l'utilisateur
 
-  useEffect(() => {
+  /* useEffect(() => {
     axios
       .get("/logements.json")
       .then((response) => setLocations(response.data))
       .catch((error) =>
         console.error("Erreur lors de la récupération :", error)
       );
-  }, []);
+  }, []); */
 
   /*
   useEffect(() => {   //marche aussi 
@@ -40,6 +41,11 @@ const Locations = () => {
       </ul>
     </div>
   );
+};
+
+// ✅ Ajout de PropTypes pour valider les `props`
+Locations.propTypes = {
+    locations: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Locations;

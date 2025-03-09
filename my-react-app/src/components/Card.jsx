@@ -18,8 +18,12 @@ const Card = ({ location, onClick }) => {
 
 // Ajout de PropTypes pour éviter l'erreur ESLint
 Card.propTypes = {
-  location: PropTypes.arrayOf(PropTypes.string).isRequired,
-  onClick: PropTypes.func,
+  location: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    title: PropTypes.string.isRequired,
+    cover: PropTypes.string.isRequired,
+  }).isRequired,   // Vérifie que location est un objet, mais ne force aucune clé
+  onClick: PropTypes.func.isRequired,  // Vérifie que location est une fonction
 };
 
 export default Card;
