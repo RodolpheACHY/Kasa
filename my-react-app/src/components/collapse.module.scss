@@ -1,12 +1,13 @@
 .collapse {
     margin-bottom: 15px;
-    border: 1px solid #ddd;
+    //border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
+    color: black;
   
     &__button {
       width: 100%;
-      background-color: #f8f8f8;
+      background-color: #FF6060;
       border: none;
       padding: 10px;
       font-size: 18px;
@@ -14,6 +15,9 @@
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
+      &:focus, &:focus-visible {
+        outline: none;
+      }
     }
   
     &__content {
