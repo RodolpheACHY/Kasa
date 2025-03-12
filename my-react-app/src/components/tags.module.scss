@@ -1,0 +1,23 @@
+@import '../styles/settings';
+
+.tagsContainer {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-start;  // Alignement naturel à gauche
+  }
+  
+  .tag {
+    // align-items: center;
+    // justify-content: center;
+    // display: flex;
+    background-color: #FF6060;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    // width: 115px;
+    max-width: 200px;
+    word-break: break-word; // Coupe les mots longs si nécessaire
+    //height: 25px;
+  }

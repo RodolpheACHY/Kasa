@@ -1,0 +1,7 @@
+@import '../styles/settings';
+
+.starContainer {
+    display: flex;      // Utilise Flexbox pour gérer l'espacement
+    gap: 10px;           // Ajoute de l'espace entre les étoiles
+    font-size: 24px;    // Ajuste la taille des étoiles
+  }

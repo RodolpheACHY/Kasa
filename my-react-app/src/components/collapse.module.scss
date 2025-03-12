@@ -1,24 +1,38 @@
+// Conteneur des collapses
 .collapse {
-    margin-bottom: 15px;
-    //border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; // ✅ Ajoute un espace entre les deux
+    width: 100%; // ✅ Les collapses prennent toute la largeur du parent
+  
+    // Pour ajouter un espace entre les boutons
+    /* &__collapse {
+      margin-bottom: 15px; // Déjà présent dans votre code
+      border-radius: 5px;
+      overflow: hidden;
+      color: black;
+  
+      // Si vous voulez ajuster l'espace entre les boutons
+      &:not(:last-child) {
+        margin-bottom: 20px; // Ajustez la valeur selon vos besoins
+      } */
   
     &__button {
-      width: 100%;
+      width: 100%; // Prend toute la largeur du conteneur
       background-color: #FF6060;
       border: none;
+      color: #fff;
       padding: 10px;
       font-size: 18px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
+  
       &:focus, &:focus-visible {
         outline: none;
       }
-    }
+    }  
   
     &__content {
       padding: 10px;
@@ -33,4 +47,6 @@
     li {
       list-style: disc;
     }
-  }
+}
+  
+  

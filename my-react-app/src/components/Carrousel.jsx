@@ -33,7 +33,7 @@ const Carrousel = ({ location }) => {
         className={styles.carrousel__arrow}
         onClick={() => handleClick("prev")}
       >
-        ❮
+        <img src="/iconPrevious.svg" alt="image precedent icon" />
       </button>
 
       {/* Image affichée */}
@@ -50,7 +50,7 @@ const Carrousel = ({ location }) => {
         className={styles.carrousel__arrow}
         onClick={() => handleClick("next")}
       >
-        ❯
+        <img src="/iconNext.svg" alt="image next icon" />
       </button>
     </div>
   );

@@ -3,6 +3,7 @@ import PropTypes from "prop-types"; // Import PropTypes
 import StarRating from "./StarRating";
 import Collapse from "./Collapse";
 import styles from "./locationDetails.module.scss";
+import Tags from "./Tags";
 
 const LocationDetails = ({ location }) => {
   /* const { id } = useParams(); // Récupère l'ID dans l'URL
@@ -26,10 +27,10 @@ const LocationDetails = ({ location }) => {
       </div>
       <h2 className={styles.locationDetails__location}>{location.location}</h2>
       <div className={styles.locationDetails__tagsStarRatingContainer}>
-        <h3 className={styles.locationDetails__tags}>{location.tags}</h3>
+        <Tags tags={location.tags} />  {/* Affiche les tags */}
         <StarRating rating={location.rating} />  {/* Affiche les étoiles */}
       </div>
-      <div className={styles.collapsesContainer}>
+      <div className={styles.locationDetails__collapsesContainer}>
         {/* Collapse pour afficher la description (paragraphe) */}
         <Collapse title="Description" content={location.description} />
         {/* Collapse pour afficher les équipements (liste) */}
