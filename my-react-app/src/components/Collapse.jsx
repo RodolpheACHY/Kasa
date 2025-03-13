@@ -11,12 +11,14 @@ const Collapse = ({ title, content }) => {
       {/* Bouton d’ouverture/fermeture */}
       <button className={styles.collapse__button} onClick={() => setIsOpen(!isOpen)}>
         {title}
-        {isOpen ? <FaChevronUp /> : <FaChevronDown />}
+        {isOpen ? <FaChevronDown /> :  <FaChevronUp /> }
       </button>
 
       {/* Contenu qui apparaît quand isOpen = true */}
       {isOpen && (
-        <div className={styles.collapse__content}>
+        <div className={`${styles.collapse__content} ${
+          isOpen ? styles["collapse__content--open"] : ""
+        }`}>
           {/* Si `content` est un tableau, affiche une liste, sinon un simple paragraphe */}
           {Array.isArray(content) ? (
             <ul>

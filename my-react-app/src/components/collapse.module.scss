@@ -2,20 +2,9 @@
 .collapse {
     display: flex;
     flex-direction: column;
-    gap: 20px; // ✅ Ajoute un espace entre les deux
-    width: 100%; // ✅ Les collapses prennent toute la largeur du parent
-  
-    // Pour ajouter un espace entre les boutons
-    /* &__collapse {
-      margin-bottom: 15px; // Déjà présent dans votre code
-      border-radius: 5px;
-      overflow: hidden;
-      color: black;
-  
-      // Si vous voulez ajuster l'espace entre les boutons
-      &:not(:last-child) {
-        margin-bottom: 20px; // Ajustez la valeur selon vos besoins
-      } */
+    gap: 0px;
+    width: 100%; // Les collapses prennent toute la largeur du parent
+    color: black;
   
     &__button {
       width: 100%; // Prend toute la largeur du conteneur
@@ -28,25 +17,44 @@
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
-  
+      transition: background-color 0.3s;
+      &:hover {
+        background-color: darken(#FF6060, 10%);
+      }
+      
       &:focus, &:focus-visible {
         outline: none;
-      }
+      } 
     }  
   
+    // Animation Slide Down
     &__content {
-      padding: 10px;
-      background-color: white;
-      transition: max-height 0.3s ease-in-out;
+      //background-color: white;
+      padding: 10px 20px 20px;
+      overflow: hidden; // Cache le contenu hors du conteneur
+      max-height: 0; // Contenu initialement caché
+      opacity: 0; // Rend le contenu invisible au départ
+      transform: translateY(-10px); // Le contenu est légèrement décalé vers le haut
+      transition: max-height 1.2s ease-out, opacity 1.2s ease-out, transform 1.2s ease-out; // Animation fluide (0.5 ease par defaut)
+      background: var(--Gray, rgba(246, 246, 246, 0.45));
+      border-radius: 5px;
+    
+      // Quand le contenu est visible
+      &--open {
+        max-height: 500px; // Ajuste en fonction de la taille max estimée
+        opacity: 1; // Rend le contenu visible
+        transform: translateY(0); // Remet le contenu à sa place
     }
+}
   
     ul {
-      padding-left: 20px;
+      list-style-type: none;
+      text-align: left;
     }
   
-    li {
+    /*li {
       list-style: disc;
-    }
+    } */
 }
   
   
