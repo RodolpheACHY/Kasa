@@ -9,7 +9,10 @@ const HomePage = ({data}) => {
   return (
     <div>
       <Header />
-      <Hero />
+      <Hero
+        image="../../public/backgroundHero.png"
+        title="Chez vous, partout et ailleurs"
+      />
       <main>
         <Locations locations={data} />
       </main>

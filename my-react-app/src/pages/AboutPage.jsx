@@ -1,43 +1,65 @@
-import React from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
+import PropTypes from "prop-types";
+import Hero from "../components/Hero";
+import Collapse from "../components/Collapse";
+import styles from "./aboutPage.module.scss";
 
 const AboutPage = () => {
+  // const { id } = useParams(); // Récupère l'ID dans l'URL
+  // console.log("ID du logement :", id);
+  
+  // const location = data.find((logement) => logement.id === id); // Cherche le logement par ID 
+
   return (
     <div>
       <Header />
-      <h1>A propos</h1>
-      <br />
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione
-        voluptatem quasi amet, officiis facilis ipsam harum necessitatibus nam.
-        Repellendus vel vero cumque quisquam iste quas, repudiandae suscipit
-        dignissimos minima at voluptas quaerat exercitationem ducimus minus
-        quasi officia? Sed consectetur beatae sapiente aut pariatur quae
-        laudantium. Dignissimos rem adipisci a aliquid consectetur aut quas eius
-        vel consequatur veniam velit quam quo exercitationem suscipit pariatur
-        unde, repellat eligendi quos eos placeat. Eligendi hic officiis
-        accusantium autem atque, laudantium magnam animi, temporibus eos
-        aspernatur facilis aliquam sed doloremque nam quidem eaque sit
-        exercitationem beatae illo nobis alias harum cupiditate voluptate amet.
-        Quae, assumenda?
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur enim
-        aut aliquid iusto eum labore recusandae, quaerat corrupti corporis
-        repellendus explicabo. Ipsam velit repellat voluptatum amet qui. Ut quia
-        sit veritatis assumenda quod perferendis libero porro sint? Nobis aut
-        eaque illum accusamus obcaecati voluptatibus fugit dolorum aliquam
-        assumenda corporis ut ab voluptatum eius, optio voluptates omnis,
-        asperiores fuga provident! Nam deleniti reprehenderit adipisci sint
-        minima? Expedita quod dolorem aliquam quasi! Officiis quas corporis
-        velit adipisci magnam vitae quos dolore quam consequatur aut minus dolor
-        dolorum ullam commodi in fugiat qui, corrupti eius neque, totam officia
-        molestias cupiditate? Tempora, blanditiis labore!
-      </p>
+      <Hero 
+        image="./kkalen-emsley-Bkci_8qcdvQ-unsplash 2.png"
+        withText={false}
+      />
+      {/* Collapse 1 : Fiabilité */}
+      <Collapse
+        title="Fiabilité"
+        content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, ettoutes les informations sont régulièrement vérifiées par nos équipes"
+        width="80%"
+        customClass="special-collapse"
+      />
+
+      {/* Collapse 2 : Respect */}
+      <Collapse
+        title="Respect"
+        content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de la plateforme"
+        width="80%"
+        customClass="special-collapse"
+      />
+
+      {/* ✅ Collapse 3 : Service */}
+      <Collapse
+        title="Service"
+        content="La qualité du service est au coeur de notre engagement chez Kasa. Nous veillons à ce que chaque intercation, que ce soit avec nos hôtes ou nos locataires, soit empreinte de respect et de bienveillance"
+        width="80%"
+        customClass="special-collapse"
+      />
+
+      {/* ✅ Collapse 4 : Sécurité */}
+      <Collapse
+        title="Sécurité"
+        content="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
+        width="80%"
+        customClass="special-collapse"
+      />
       <Footer />
     </div>
   );
+};
+
+AboutPage.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired, // Vérifie que `id` est bien une string
+    })
+  ).isRequired,
 };
 
 export default AboutPage;
