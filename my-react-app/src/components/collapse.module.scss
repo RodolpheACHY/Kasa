@@ -1,3 +1,4 @@
+@use '../styles/settings';
 // Conteneur des collapses
 .collapse {
     display: flex;
@@ -29,13 +30,6 @@
   
     // Animation Slide Down
     &__content {
-      //background-color: white;
-      /* padding: 10px 20px 20px;
-      overflow: hidden; // Cache le contenu hors du conteneur
-      max-height: 0; // Contenu initialement caché
-      opacity: 0; // Rend le contenu invisible au départ
-      transform: translateY(-10px); // Le contenu est légèrement décalé vers le haut
-      transition: max-height 1.2s ease-out, opacity 1.2s ease-out, transform 1.2s ease-out; // Animation fluide (0.5 ease par defaut) */
       background: var(--Gray, rgba(246, 246, 246, 0.45));
       border-radius: 5px;
       overflow: hidden;
@@ -45,9 +39,6 @@
     
       // Quand le contenu est visible
       &--open {
-        /* max-height: 500px; // Ajuste en fonction de la taille max estimée
-        opacity: 1; // Rend le contenu visible 
-        transform: translateY(0); // Remet le contenu à sa place */
         max-height: 1000px;
       }
     }
@@ -84,14 +75,4 @@
       list-style-type: none;
       text-align: left;
     }
-  
-    /*li {
-      list-style: disc;
-    } */
-}
-
-.special-collapse {
-    border: 2px solid #FF6060;
-    border-radius: 8px;
-    padding: 15px;
 }

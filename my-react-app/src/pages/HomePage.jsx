@@ -4,13 +4,14 @@ import Hero from "../components/Hero";
 import Locations from "../components/Locations";
 import Footer from "../components/Footer";
 import PropTypes from "prop-types";
+import backgroundImage from '/backgroundHero.png'
 
 const HomePage = ({data}) => {
   return (
     <div>
       <Header />
       <Hero
-        image="../../public/backgroundHero.png"
+        backgroundImage={backgroundImage}
         title="Chez vous, partout et ailleurs"
       />
       <main>

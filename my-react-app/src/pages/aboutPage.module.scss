@@ -1,8 +1,21 @@
 @import '../styles/settings';
 
-.special-collapse {
-    border: 2px solid #FF6060;
+.collapseContainer {
+    display: flex ;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 38px;
+}
+
+.specialCollapse {
+    // border: 2px solid #FF6060;
     border-radius: 5px;
-    padding: 15px;
+    // padding: 15px;
     background-color: rgba(255, 96, 96, 0.1);
+    height: fit-content;
+}
+
+.aboutCollapseContent {
+    height: fit-content;
 }
