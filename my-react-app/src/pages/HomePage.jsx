@@ -12,7 +12,7 @@ const HomePage = ({data}) => {
       <Header />
       <Hero
         backgroundImage={backgroundImage}
-        title="Chez vous, partout et ailleurs"
+        text="Chez vous, partout et ailleurs"
       />
       <main>
         <Locations locations={data} />

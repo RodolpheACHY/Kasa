@@ -18,6 +18,11 @@
     &__logoHeader {
         height: 68px;
         margin-bottom: 50px;
+
+        // Supprime le margin-bottom si noMargin est passé
+        &--noMargin {
+        margin-bottom: 0;
+        }
     }
 
     &__navigation {

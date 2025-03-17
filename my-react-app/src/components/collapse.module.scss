@@ -19,10 +19,7 @@
       align-items: center;
       cursor: pointer;
       transition: background-color 0.3s;
-      &:hover {
-        background-color: darken(#FF6060, 10%);
-      }
-      
+   
       &:focus, &:focus-visible {
         outline: none;
       } 
@@ -39,7 +36,8 @@
     
       // Quand le contenu est visible
       &--open {
-        max-height: 1000px;
+        // max-height: 1000px;
+        max-height: fit-content;
       }
     }
 
@@ -53,6 +51,14 @@
             padding: 10px 20px;
             text-align: left;
         }
+    }
+
+    &__title {
+        font-size: 20px; // Taille personnalisée
+        color: white; // Couleur personnalisée
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
     }
 
     &__arrow {

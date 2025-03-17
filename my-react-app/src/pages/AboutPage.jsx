@@ -7,11 +7,7 @@ import styles from "./aboutPage.module.scss";
 import backgroundImage from "/kalen-emsley-Bkci_8qcdvQ-unsplash_2.png"
 
 const AboutPage = () => {
-  // const { id } = useParams(); // Récupère l'ID dans l'URL
-  // console.log("ID du logement :", id);
   
-  // const location = data.find((logement) => logement.id === id); // Cherche le logement par ID 
-
   return (
     <div className={styles.aboutPage}>
       <Header />

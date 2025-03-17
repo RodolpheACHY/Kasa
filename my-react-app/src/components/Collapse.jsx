@@ -20,15 +20,16 @@ const Collapse = ({ title, content, width, customClass }) => {
       </div>   */}
       <button
         className={styles.collapse__button}
-        onClick={() => setIsOpen(!isOpen)}
+        //onClick={() => setIsOpen(!isOpen)}
       >
-        {title}
+        <span className={styles.collapse__title}>{title}</span>  
 
         {/* ✅ Un seul Chevron avec rotation dynamique */}
         <FaChevronDown
           className={`${styles.collapse__arrow} ${
-            isOpen ? styles["collapse__arrow--open"] : ""
+            isOpen ? styles["collapse__arrow--open"] : "" 
           }`}
+          onClick={() => setIsOpen(!isOpen)}
         />
       </button>
 
