@@ -25,15 +25,18 @@
 
   &__title {
     position: absolute;
-    top: 0;
-    left: 0;
+    //top: 0;
+    //left: 0;
     //background: rgba(0, 0, 0, 0.7);
+    max-width: 260px;
+    top: 220px;
+    left: 15px;
     color: white;
     height: 100%;
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    // align-items: center;
+    // justify-content: center;
     border-radius: 4px;
    // opacity: 0;
    // transform: scaleY(0);
