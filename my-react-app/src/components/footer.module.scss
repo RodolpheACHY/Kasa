@@ -11,6 +11,10 @@
     gap: 30px;
     background-color: $black;
 
+    @media (max-width: $breakpoint-tablet) {
+        gap: 0px;
+    }
+
     &__logoFooter {
         height: 68px;
         margin-bottom: 50px;
@@ -24,5 +28,12 @@
         font-size: 24px;
         font-style: normal;
         font-weight: 500;
+
+        @media (max-width: $breakpoint-tablet) {
+            font-size: $font-size-h6;
+            font-weight:normal;
+            margin-top: 10px;
+            max-width: 100px;
+        }
     }
 }

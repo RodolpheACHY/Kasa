@@ -14,6 +14,14 @@
     margin-bottom: 43px;
     margin-left: auto;
     margin-right: auto;
+
+    @media (max-width: $breakpoint-tablet) {
+        margin-top: 27px;
+        margin-bottom: 22px;
+        height: 111px;
+        width: 90%;
+        border-radius: 10px;
+    }
  
     &__h1 {
         font-size: 48px; /* Taille du texte */
@@ -24,6 +32,13 @@
         font-weight: 700;
         line-height: 142.6%; /* 68.448px */
         text-shadow: -1px -1px 0px #000000, 1px -1px 0px #000000, -1px 1px 0px #000000, 1px 1px 0px #000000;
+    
+        @media (max-width: $breakpoint-tablet) {
+            font-size: $font-size-h3;
+            text-align: left;
+            max-width: 320px;
+            padding : 31px 70px 32px 16px
+        }
     }
 }
   

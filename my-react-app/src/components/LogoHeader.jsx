@@ -10,8 +10,11 @@ const LogoHeader = ({ noMargin }) => {
       }`}
     >
       {/* les images importées depuis la balise <img> sont accessibles dans « public ». */}
-      <img src="/logoHeader.svg" alt="logo Kasa" />
+      <img src="/logoHeader.svg" alt="logo Kasa" className={styles.header__logoHeader} />
       {/* <img src="./logoHeader.svg" alt="logo Kasa" /> */}
+
+    
+
     </div>
   );
 };

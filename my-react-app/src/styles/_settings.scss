@@ -17,9 +17,27 @@ $font-size-h5: 14px;
 $font-size-h6: 12px;
 $font-size-body: 10px;
 
+// media queries
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop: 1280px;
 
 @mixin verticalCenter {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+// Mobile et tablette (jusqu'à 1024px)
+@mixin mobile-and-tablet {
+  @media (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+// Desktop uniquement (à partir de 1024px)
+@mixin desktop {
+  @media (min-width: $breakpoint-tablet + 1) {
+    @content;
+  }
 }
