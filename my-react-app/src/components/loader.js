@@ -6,7 +6,8 @@ export async function loader({ params }) {
     const record = await logements.find((logement) => logement.id === params.id);
   if (!record) {
     //throw data("Record Not Found", { status: 404 });
-    throw redirect("/404");
+    //throw redirect("/404");
+    throw redirect("*");
   }
   return record;
 }

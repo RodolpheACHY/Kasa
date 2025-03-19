@@ -6,7 +6,7 @@ const Hero = ({ text, backgroundImage }) => {
     <section 
       className={styles.hero}
       style={{ 
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${backgroundImage})`
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${backgroundImage})`
       }}
     >
       {text && <h1 className={styles.hero__h1}>{text}</h1>}

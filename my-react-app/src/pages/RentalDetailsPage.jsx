@@ -3,7 +3,7 @@ import Carrousel from "../components/Carrousel";
 import Footer from "../components/Footer";
 import LocationDetails from "../components/LocationDetails";
 // import data from "../data/logements.json";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const RentalDetailsPage = ({data}) => {
@@ -12,6 +12,10 @@ const RentalDetailsPage = ({data}) => {
   
   const location = data.find((logement) => logement.id === id); // Cherche le logement par ID 
 
+  if (!location) {
+    return <Navigate to="*" replace={true} /> ;
+  }
+  
   return (
     <div>
       <Header />
