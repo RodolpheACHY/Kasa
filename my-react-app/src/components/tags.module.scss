@@ -20,4 +20,8 @@
     max-width: 200px;
     word-break: break-word; // Coupe les mots longs si nécessaire
     //height: 25px;
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: 10px;
+    }
   }

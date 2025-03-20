@@ -1,4 +1,4 @@
-@use '../styles/_settings.scss';
+@use '../styles/_settings.scss' as settings;
 
 .carrousel {
     position: relative;
@@ -10,8 +10,13 @@
     align-items: center;
     justify-content: center;
     //background: black;
-    border-radius: 10px;
+    border-radius: 25px;
     width:90%;
+
+    @media (max-width: settings.$breakpoint-tablet) {
+        border-radius: 10px;
+        height: 255px;
+    }
   }
   
   .carrousel__list {
@@ -57,6 +62,15 @@
     &:hover {
       background: rgba(0, 0, 0, 0.8);
       //color: rgba(0, 0, 0, 0.8);
+    }
+
+    @media (max-width: settings.$breakpoint-tablet) {
+        font-size: 1rem;
+
+        svg { // Cibler l'élément SVG
+            width: 1rem; // Modifier la largeur
+            height: 1rem; // Modifier la hauteur
+        }
     }
   }
   

@@ -1,5 +1,42 @@
 @import '../styles/settings';
 
+.aboutPage {
+
+    &__hero {
+        box-shadow: none;
+
+        @media (max-width: $breakpoint-tablet) {
+            margin-top: 19px;
+            margin-bottom: 19px; 
+        }
+    }
+
+    &__collapseContainer {
+        display: flex ;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        margin-bottom: 38px;
+
+        @media (max-width: $breakpoint-tablet) {
+            gap: 20px;
+            margin-top: 0px;
+            margin-bottom: 20px; 
+        }
+    }
+
+    &__specialCollapse {
+        border-radius: 5px;
+        height: fit-content;
+    }
+
+    &__aboutCollapseContent {
+        height: fit-content;
+    }
+
+}
+
+/*
 .collapseContainer {
     display: flex ;
     flex-direction: column;
@@ -18,4 +55,4 @@
 
 .aboutCollapseContent {
     height: fit-content;
-}
+} */

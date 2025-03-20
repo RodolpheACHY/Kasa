@@ -52,7 +52,7 @@
         @media (max-width: $breakpoint-tablet) {
           position: absolute;
           left: 220px;
-          top: 117px;
+          top: 95px;
         }
   
         &__name {
@@ -95,6 +95,7 @@
 
       @media (max-width: $breakpoint-tablet) {
         font-size: 14px;
+        margin-bottom: 10px;
       }
 
     }
@@ -120,9 +121,9 @@
         font-weight: 500;
         border-radius: 10px;
 
-        @media (max-width: $breakpoint-tablet) {
+       /* @media (max-width: $breakpoint-tablet) {
           font-size: 10px;
-        }
+        } */
       }
 
       &__starContainer {
@@ -130,11 +131,11 @@
         gap: 10px;
         font-size: 24px;
 
-        @media (max-width: $breakpoint-tablet) {
+     /*   @media (max-width: $breakpoint-tablet) {
           display:flex;
           gap: 5px;
           font-size: 12px;
-        }
+        } */
       }
     }
   

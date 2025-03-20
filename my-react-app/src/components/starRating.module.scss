@@ -4,4 +4,10 @@
     display: flex;      // Utilise Flexbox pour gérer l'espacement
     gap: 10px;           // Ajoute de l'espace entre les étoiles
     font-size: 24px;    // Ajuste la taille des étoiles
+
+    @media (max-width: $breakpoint-tablet) {
+        display:flex;
+        gap: 5px;
+        font-size: 12px;
+      }
   }
