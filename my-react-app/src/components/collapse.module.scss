@@ -1,4 +1,4 @@
-@use '../styles/settings';
+@import '../styles/settings';
 // Conteneur des collapses
 .collapse {
     display: flex;
@@ -19,10 +19,15 @@
       align-items: center;
       cursor: pointer;
       transition: background-color 0.3s;
+      border-radius: 10px;
    
       &:focus, &:focus-visible {
         outline: none;
       } 
+
+      @media (max-width: $breakpoint-tablet) {
+        border-radius: 5px;
+      }
     }  
   
     // Animation Slide Down
@@ -54,11 +59,15 @@
     }
 
     &__title {
-        font-size: 20px; // Taille personnalisée
+        font-size: 18px; // Taille personnalisée
         color: white; // Couleur personnalisée
-        font-size: 24px;
+        // font-size: 24px;
         font-style: normal;
         font-weight: 700;
+
+        @media (max-width: $breakpoint-tablet) {
+            font-size: 13px;
+        }
     }
 
     &__arrow {
@@ -74,6 +83,10 @@
         }
         &--closed {
             transform: rotate(0deg); // ✅ Position initiale
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+            font-size: 14px;
         }
     }
   
