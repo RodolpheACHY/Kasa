@@ -67,7 +67,7 @@
     @media (max-width: settings.$breakpoint-tablet) {
         font-size: 1rem;
 
-        svg { // Cibler l'élément SVG
+        img { // Cibler l'élément img qui contient notre SVG
             width: 1rem; // Modifier la largeur
             height: 1rem; // Modifier la hauteur
         }
