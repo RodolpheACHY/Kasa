@@ -56,6 +56,10 @@
             padding: 10px 20px;
             text-align: left;
         }
+
+        @media (max-width: $breakpoint-tablet) {
+            font-size: 12px;
+        }
     }
 
     &__title {
