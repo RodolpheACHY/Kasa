@@ -1,4 +1,4 @@
-@import '../styles/_settings.scss';
+@use '../styles/_settings.scss';
 
 .locationDetails {
     // Styles pour le conteneur principal
@@ -12,7 +12,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    @media (max-width: $breakpoint-tablet) {
+    @media (max-width: settings.$breakpoint-tablet) {
       padding-bottom: 27px;
     }
   
@@ -23,7 +23,7 @@
       justify-content: space-between;
       margin-bottom: 24px;
 
-      @media (max-width: $breakpoint-tablet) {
+      @media (max-width: settings.$breakpoint-tablet) {
         flex-direction: column
       } 
     }
@@ -35,21 +35,21 @@
       // margin-bottom: 20px;
       width: 100%;
 
-      /*@media (max-width: $breakpoint-tablet) {
+      /*@media (max-width: settings.$breakpoint-tablet) {
         position: relative;
       } */
     }
 
     &__title {
-      font-size: 36px;
+      font-size: settings.$font-size-h2;
       margin-bottom: 10px;
       font-style: normal;
-      font-weight: 500;
-      color: #FF6060;
+      font-weight: settings.$font-weight-regular;
+      color: settings.$primary-color;
       text-align: left;
 
-      @media (max-width: $breakpoint-tablet) {
-        font-size: 18px;
+      @media (max-width: settings.$breakpoint-tablet) {
+        font-size: settings.$font-size-h4;
         text-align: left;
       }
     }
@@ -60,7 +60,7 @@
       align-items: end;
       gap: 27px;
 
-      @media (max-width: $breakpoint-tablet) {
+      @media (max-width: settings.$breakpoint-tablet) {
         flex-direction: row-reverse;
         width: 100%;
         justify-content: space-between;
@@ -73,7 +73,7 @@
       align-items: center;
       justify-content: space-between;
 
-      /* @media (max-width: $breakpoint-tablet) {
+      /* @media (max-width: settings.$breakpoint-tablet) {
         position: absolute;
         left: 230px;
         top: 123px;
@@ -81,18 +81,18 @@
     }  
 
     &__ownerName {
-      font-size: 18px;
+      font-size: settings.$font-size-h4;
       margin-right: 10px;
-      color: #FF6060;
+      color: settings.$primary-color;
       text-align: right;
       font-family: Montserrat;
-      font-size: 18px;
+      font-size: settings.$font-size-h4;
       font-style: normal;
-      font-weight: 500;
+      font-weight: settings.$font-weight-regular;
       max-width: 70px;
 
-      @media (max-width: $breakpoint-tablet) {
-        font-size: 12px;
+      @media (max-width: settings.$breakpoint-tablet) {
+        font-size: settings.$font-size-h6;
       }
     }
   
@@ -101,23 +101,23 @@
       height: 64px;
       border-radius: 75px;
 
-      @media (max-width: $breakpoint-tablet) {
+      @media (max-width: settings.$breakpoint-tablet) {
         width: 32px;
         height: 32px;
       }
     }
       
     &__location {
-      font-size: 18px;
+      font-size: settings.$font-size-h4;
       margin-bottom: 20px;
       text-align: left;
-      color: #000;
-      font-size: 18px;
+      color: settings.$black;
+      font-size: settings.$font-size-h4;
       font-style: normal;
-      font-weight: 500;
+      font-weight: settings.$font-weight-regular;
 
-      @media (max-width: $breakpoint-tablet) {
-        font-size: 14px;
+      @media (max-width: settings.$breakpoint-tablet) {
+        font-size: settings.$font-size-h5;
         margin-bottom: 10px;
       }
     }
@@ -129,7 +129,7 @@
       align-items: center;
       margin-bottom: 20px;
 
-      @media (max-width: $breakpoint-tablet) {
+      @media (max-width: settings.$breakpoint-tablet) {
         flex-direction: column;
         gap: 24px;
         align-items: flex-start;
@@ -140,25 +140,25 @@
       font-size: 16px;
       color: #FFF;
       text-align: center;
-      font-size: 14px;
+      font-size: settings.$font-size-h5;
       font-style: normal;
-      font-weight: 500;
+      font-weight: settings.$font-weight-regular;
       border-radius: 10px;
 
-     @media (max-width: $breakpoint-tablet) {
-        font-size: 10px;
+     @media (max-width: settings.$breakpoint-tablet) {
+        font-size: settings.$font-size-body;
       }
     }
 
     &__starContainer {
       display:flex;
       gap: 10px;
-      font-size: 24px;
+      font-size: settings.$font-size-h3;
 
-      @media (max-width: $breakpoint-tablet) {
+      @media (max-width: settings.$breakpoint-tablet) {
         display:flex;
         gap: 5px;
-        font-size: 12px;
+        font-size: settings.$font-size-h6;
       } 
     }
 
@@ -169,7 +169,7 @@
       width: 100%;
       gap: 76px;       
       
-      @media (max-width: $breakpoint-tablet) {
+      @media (max-width: settings.$breakpoint-tablet) {
         display: flex;
         flex-direction: column;
         width: 100%;

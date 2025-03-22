@@ -1,4 +1,4 @@
-@import '../styles/settings';
+@use '../styles/settings';
 
 .footer {
     display: flex;
@@ -9,9 +9,9 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    background-color: $black;
+    background-color: settings.$black;
 
-    @media (max-width: $breakpoint-tablet) {
+    @media (max-width: settings.$breakpoint-tablet) {
         gap: 0px;
     }
 
@@ -25,12 +25,12 @@
         justify-content: space-between;
         color: #FFF;
         text-align: center;
-        font-size: 24px;
+        font-size: settings.$font-size-h3;
         font-style: normal;
         font-weight: normal;
 
-        @media (max-width: $breakpoint-tablet) {
-            font-size: $font-size-h6;
+        @media (max-width: settings.$breakpoint-tablet) {
+            font-size: settings.$font-size-h6;
             margin-top: 10px;
             max-width: 100px;
         }

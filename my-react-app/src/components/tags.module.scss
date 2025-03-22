@@ -1,4 +1,4 @@
-@import '../styles/settings';
+@use '../styles/settings';
 
 .tagsContainer {
     display: flex;
@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;  // Alignement naturel à gauche
 
-    @media (max-width: $breakpoint-tablet) {
+    @media (max-width: settings.$breakpoint-tablet) {
         margin-bottom: 10px;
     }
   }
@@ -15,17 +15,17 @@
     // align-items: center;
     // justify-content: center;
     // display: flex;
-    background-color: #FF6060;
-    color: white;
+    background-color: settings.$primary-color;
+    color: settings.$secondary-color;
     padding: 5px 10px;
     border-radius: 15px;
-    font-size: 14px;
+    font-size: settings.$font-size-h5;
     // width: 115px;
     max-width: 200px;
     word-break: break-word; // Coupe les mots longs si nécessaire
     //height: 25px;
 
-    @media (max-width: $breakpoint-tablet) {
-        font-size: 10px;
+    @media (max-width: settings.$breakpoint-tablet) {
+        font-size: settings.$font-size-body;
     }
   }

@@ -36,8 +36,9 @@ $breakpoint-desktop: 1280px;
 }
 
 // Desktop uniquement (à partir de 1024px)
+$breakpoint-tablet-plus-one: $breakpoint-tablet + 1;
 @mixin desktop {
-  @media (min-width: $breakpoint-tablet + 1) {
+  @media (min-width: $breakpoint-tablet-plus-one) {
     @content;
   }
 }

@@ -1,19 +1,19 @@
-@import '../styles/settings';
+@use '../styles/settings';
 // Conteneur des collapses
 .collapse {
     display: flex;
     flex-direction: column;
     gap: 0px;
     width: 100%; // Les collapses prennent toute la largeur du parent
-    color: black;
+    color: settings.$black;
   
     &__button {
       width: 100%; // Prend toute la largeur du conteneur
-      background-color: #FF6060;
+      background-color: settings.$primary-color;
       border: none;
       color: #fff;
       padding: 10px;
-      font-size: 18px;
+      font-size: settings.$font-size-h4;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -25,7 +25,7 @@
         outline: none;
       } 
 
-      @media (max-width: $breakpoint-tablet) {
+      @media (max-width: settings.$breakpoint-tablet) {
         border-radius: 5px;
       }
     }  
@@ -41,7 +41,6 @@
     
       // Quand le contenu est visible
       &--open {
-        // max-height: 1000px;
         max-height: fit-content;
       }
     }
@@ -57,19 +56,18 @@
             text-align: left;
         }
 
-        @media (max-width: $breakpoint-tablet) {
-            font-size: 12px;
+        @media (max-width: settings.$breakpoint-tablet) {
+            font-size: settings.$font-size-h6;
         }
     }
 
     &__title {
-        font-size: 18px; // Taille personnalisée
-        color: white; // Couleur personnalisée
-        // font-size: 24px;
+        font-size: settings.$font-size-h4;
+        color: settings.$secondary-color;
         font-style: normal;
-        font-weight: 700;
+        font-weight: settings.$font-weight-bold;
 
-        @media (max-width: $breakpoint-tablet) {
+        @media (max-width: settings.$breakpoint-tablet) {
             font-size: 13px;
         }
     }
@@ -79,18 +77,18 @@
         border: none;
         cursor: pointer;
         padding: 0px;
-        color: white;
-        font-size: 24px; // Ajuste la taille de l'icône
-        transition: transform 0.5s ease; // ✅ Animation fluide de la rotation
+        color: settings.$secondary-color;
+        font-size: settings.$font-size-h3; // Ajuste la taille de l'icône
+        transition: transform 0.5s ease; 
         &--open {
-            transform: rotate(180deg); // ✅ Rotation complète vers le bas
+            transform: rotate(180deg); // Rotation complète vers le bas
         }
         &--closed {
-            transform: rotate(0deg); // ✅ Position initiale
+            transform: rotate(0deg); // Position initiale
         }
 
-        @media (max-width: $breakpoint-tablet) {
-            font-size: 14px;
+        @media (max-width: settings.$breakpoint-tablet) {
+            font-size: settings.$font-size-h5;
         }
     }
   

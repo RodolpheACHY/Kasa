@@ -1,13 +1,11 @@
-@import '../styles/settings';
+@use '../styles/settings';
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    //padding-top: 15px;
-    background-color: $secondary-color;
-    color: $secondary-color;
-    // max-width: 1280px;
+    background-color: settings.$secondary-color;
+    color: settings.$secondary-color;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
@@ -15,7 +13,7 @@
     margin-right: 40px;
     padding-bottom: 0px;
 
-    @media (max-width: $breakpoint-tablet) {
+    @media (max-width: settings.$breakpoint-tablet) {
         margin: 0 auto;
         padding: 0;
         width: 90%
@@ -30,7 +28,7 @@
         margin-bottom: 0;
         }
 
-        @media (max-width: $breakpoint-tablet) {
+        @media (max-width: settings.$breakpoint-tablet) {
             width: 145px;
             margin-bottom: 0px;
         }
@@ -49,7 +47,7 @@
         margin: 0;
         padding: 0;
 
-        @media (max-width: $breakpoint-tablet) {
+        @media (max-width: settings.$breakpoint-tablet) {
            gap: 26px;
         }
     }
@@ -60,22 +58,20 @@
 
     &__link {
         text-decoration: none;
-        color: $black;
-        //font-weight: bold;
+        color: settings.$black;
         transition: color 0.3s;
         margin-left: 57px;
 
         &:hover {
-            color: $black;
+            color: settings.$black;
         }
 
         &--active {
-            // color: $black;
-            border-bottom: 1px solid $black;
+            border-bottom: 1px solid settings.$black;
         }
 
-        @media (max-width: $breakpoint-tablet) {
-            font-size: 12px;
+        @media (max-width: settings.$breakpoint-tablet) {
+            font-size: settings.$font-size-h6;
             text-transform: uppercase;
             margin-left: 0px;
         }

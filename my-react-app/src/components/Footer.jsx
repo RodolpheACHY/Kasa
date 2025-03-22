@@ -1,4 +1,3 @@
-import React from "react";
 import LogoFooter from "./LogoFooter";
 import styles from "./footer.module.scss";
 

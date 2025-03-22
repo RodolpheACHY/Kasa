@@ -2,14 +2,12 @@
 
 .carrousel {
     position: relative;
-    // width: 600px;
     height: 400px;
     margin: auto;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    //background: black;
     border-radius: 25px;
     width:90%;
 
@@ -26,18 +24,10 @@
     position: relative;
   }
   
-  //.slide {
   .carrousel__imageContainer {
-    // position: absolute;
     width: 100%;
     height: 100%;
-    //opacity: 0;
-    //transition: opacity 0.5s ease-in-out;
   }
-  
-  /*.carrousel__imageContainer.active {
-    opacity: 1;
-  } */
   
   .carrousel__image {
     width: 100%;
@@ -51,23 +41,21 @@
     top: 50%;
     transform: translateY(-50%);
     background: transparent;
-    color: white;
+    color: settings.$secondary-color;
     border: none;
     cursor: pointer;
     padding: 10px 15px;
     font-size: 2rem;
-    //border-radius: 50%;
     transition: 0.3s;
   
     &:hover {
       background: rgba(0, 0, 0, 0.8);
-      //color: rgba(0, 0, 0, 0.8);
     }
 
     @media (max-width: settings.$breakpoint-tablet) {
         font-size: 1rem;
 
-        img { // Cibler l'élément img qui contient notre SVG
+        img { // Cible l'élément img qui contient notre SVG
             width: 1rem; // Modifier la largeur
             height: 1rem; // Modifier la hauteur
         }

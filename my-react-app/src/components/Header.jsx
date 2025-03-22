@@ -1,4 +1,3 @@
-import React from "react";
 import Navigation from "./Navigation";
 import LogoHeader from "./LogoHeader";
 import styles from "./header.module.scss";

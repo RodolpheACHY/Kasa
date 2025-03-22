@@ -1,4 +1,4 @@
-@import '../styles/_settings.scss';
+@use '../styles/_settings';
 
 .card {
   position: relative;
@@ -23,7 +23,7 @@
     z-index: 0;
   }
 
-  @media (max-width: $breakpoint-tablet) {
+  @media (max-width: settings.$breakpoint-tablet) {
     width: 90%;
     height: 255px;
     background: none
@@ -44,7 +44,7 @@
     max-width: 260px;
     top: 220px;
     left: 15px;
-    color: white;
+    color: settings.$secondary-color;
     height: 100%;
     width: 100%;
     display: flex;
@@ -58,7 +58,7 @@
     font-size: 1rem;
     z-index: 1;
 
-    @media (max-width: $breakpoint-tablet) {
+    @media (max-width: settings.$breakpoint-tablet) {
       top: 190px;
       left: 15px;
       background: none;

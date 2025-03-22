@@ -1,4 +1,4 @@
-@import '../styles/settings';
+@use '../styles/settings';
 
 .hero {
     // background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../public/backgroundHero.png');
@@ -17,7 +17,7 @@
     // box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
     box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.5);
 
-    @media (max-width: $breakpoint-tablet) {
+    @media (max-width: settings.$breakpoint-tablet) {
         margin-top: 27px;
         margin-bottom: 22px;
         height: 111px;
@@ -26,17 +26,17 @@
     }
  
     &__h1 {
-        font-size: 48px; /* Taille du texte */
+        font-size: settings.$font-size-h1; /* Taille du texte */
         text-align: center;
         color: #FFF;
-        font-size: 48px;
+        font-size: settings.$font-size-h1;
         font-style: normal;
-        font-weight: 700;
+        font-weight: settings.$font-weight-bold;
         line-height: 142.6%; /* 68.448px */
         text-shadow: -1px -1px 0px #000000, 1px -1px 0px #000000, -1px 1px 0px #000000, 1px 1px 0px #000000;
 
-        @media (max-width: $breakpoint-tablet) {
-            font-size: $font-size-h3;
+        @media (max-width: settings.$breakpoint-tablet) {
+            font-size: settings.$font-size-h3;
             text-align: left;
             max-width: 320px;
             padding : 31px 70px 32px 16px
