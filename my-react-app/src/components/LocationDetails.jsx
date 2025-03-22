@@ -18,17 +18,19 @@ const LocationDetails = ({ location }) => {
   return (
     <div className={styles.locationDetails}>
       {/* <Carrousel pictures={pictures} /> */}
-      <div className={styles.locationDetails__titleOwnerContainer}>
-        <h1 className={styles.locationDetails__titleOwnerContainer__title}>{location.title}</h1>
-        <div className={styles.locationDetails__titleOwnerContainer__ownerInfoImgContainer}>
-            <h2 className={styles.locationDetails__titleOwnerContainer__ownerInfoImgContainer__name}>{location.host.name}</h2>
-            <img className={styles.locationDetails__titleOwnerContainer__ownerInfoImgContainer__picture} src={location.host.picture} alt={`Photo de ${location.host.picture}`}></img>
+       <div className={styles["locationDetails__summary-group"]}>     {/* les [""] permettent de nommer notre classe avec des - */}
+        <div className={styles.locationDetails__titleLocTagsContainer}>
+            <h1 className={styles.locationDetails__title}>{location.title}</h1>
+            <h2 className={styles.locationDetails__location}>{location.location}</h2>
+            <Tags tags={location.tags} />  {/* Affiche les tags */}
         </div>
-      </div>
-      <h2 className={styles.locationDetails__location}>{location.location}</h2>
-      <div className={styles.locationDetails__tagsStarRatingContainer}>
-        <Tags tags={location.tags} />  {/* Affiche les tags */}
-        <StarRating rating={location.rating} />  {/* Affiche les étoiles */}
+        <div className={styles.locationDetails__ownerInfoStarContainer}>
+            <div className={styles.locationDetails__ownerNameImgContainer}>
+                <h2 className={styles.locationDetails__ownerName}>{location.host.name}</h2>
+                <img className={styles.locationDetails__ownerImg} src={location.host.picture} alt={`Photo de ${location.host.picture}`}></img>
+            </div>
+            <StarRating rating={location.rating} />  {/* Affiche les étoiles */}
+        </div>
       </div>
       <div className={styles.locationDetails__collapsesContainer}>
         {/* Collapse pour afficher la description (paragraphe) */}

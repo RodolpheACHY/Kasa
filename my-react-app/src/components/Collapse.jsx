@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { FaChevronDown } from "react-icons/fa"; // Icônes pour l'effet d'ouverture/fermeture
+import { FaChevronUp } from "react-icons/fa"; // Icônes pour l'effet d'ouverture/fermeture
 import styles from "./collapse.module.scss"; // Assure-toi d'avoir un fichier SCSS
 
 const Collapse = ({ title, content, width, customClass }) => {
@@ -25,7 +25,7 @@ const Collapse = ({ title, content, width, customClass }) => {
         <span className={styles.collapse__title}>{title}</span>  
 
         {/* ✅ Un seul Chevron avec rotation dynamique */}
-        <FaChevronDown
+        <FaChevronUp
           className={`${styles.collapse__arrow} ${
             isOpen ? styles["collapse__arrow--open"] : "" 
           }`}

@@ -5,6 +5,10 @@
     gap: 8px;
     flex-wrap: wrap;
     justify-content: flex-start;  // Alignement naturel à gauche
+
+    @media (max-width: $breakpoint-tablet) {
+        margin-bottom: 10px;
+    }
   }
   
   .tag {

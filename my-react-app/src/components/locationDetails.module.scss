@@ -16,74 +16,97 @@
       padding-bottom: 27px;
     }
   
-    &__titleOwnerContainer {
+    &__summary-group {
       display: flex;
       flex-direction: row;
       align-items: center;
-      // margin-bottom: 20px;
       justify-content: space-between;
-      width: 100%;
+      margin-bottom: 24px;
 
       @media (max-width: $breakpoint-tablet) {
+        flex-direction: column
+      } 
+    }
+
+    &__titleLocTagsContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      // margin-bottom: 20px;
+      width: 100%;
+
+      /*@media (max-width: $breakpoint-tablet) {
         position: relative;
-      }
+      } */
+    }
 
-  
-      &__title {
-        font-size: 36px;
-        margin-bottom: 10px;
-        font-style: normal;
-        font-weight: 500;
-        color: #FF6060;
+    &__title {
+      font-size: 36px;
+      margin-bottom: 10px;
+      font-style: normal;
+      font-weight: 500;
+      color: #FF6060;
+      text-align: left;
 
-        @media (max-width: $breakpoint-tablet) {
-          font-size: 18px;
-          text-align: left;
-        }
-
-      }
-  
-      &__ownerInfoImgContainer {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-
-        @media (max-width: $breakpoint-tablet) {
-          position: absolute;
-          left: 220px;
-          top: 95px;
-        }
-  
-        &__name {
-          font-size: 18px;
-          margin-right: 10px;
-          color: #FF6060;
-          text-align: right;
-          font-family: Montserrat;
-          font-size: 18px;
-          font-style: normal;
-          font-weight: 500;
-          max-width: 70px;
-
-          @media (max-width: $breakpoint-tablet) {
-            font-size: 12px;
-          }
-        }
-  
-        &__picture {
-          width: 64px;
-          height: 64px;
-          border-radius: 75px;
-
-          @media (max-width: $breakpoint-tablet) {
-            width: 32px;
-            height: 32px;
-          }
-        }
+      @media (max-width: $breakpoint-tablet) {
+        font-size: 18px;
+        text-align: left;
       }
     }
   
+    &__ownerInfoStarContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      gap: 27px;
+
+      @media (max-width: $breakpoint-tablet) {
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+
+    &__ownerNameImgContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      /* @media (max-width: $breakpoint-tablet) {
+        position: absolute;
+        left: 230px;
+        top: 123px;
+      } */
+    }  
+
+    &__ownerName {
+      font-size: 18px;
+      margin-right: 10px;
+      color: #FF6060;
+      text-align: right;
+      font-family: Montserrat;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      max-width: 70px;
+
+      @media (max-width: $breakpoint-tablet) {
+        font-size: 12px;
+      }
+    }
+  
+    &__ownerImg {
+      width: 64px;
+      height: 64px;
+      border-radius: 75px;
+
+      @media (max-width: $breakpoint-tablet) {
+        width: 32px;
+        height: 32px;
+      }
+    }
+      
     &__location {
       font-size: 18px;
       margin-bottom: 20px;
@@ -97,9 +120,9 @@
         font-size: 14px;
         margin-bottom: 10px;
       }
-
     }
   
+    /*
     &__tagsStarRatingContainer {
       display: flex;
       justify-content: space-between;
@@ -111,34 +134,34 @@
         gap: 24px;
         align-items: flex-start;
       }
+    } */
   
-      &__tags {
-        font-size: 16px;
-        color: #FFF;
-        text-align: center;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        border-radius: 10px;
+    &__tags {
+      font-size: 16px;
+      color: #FFF;
+      text-align: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      border-radius: 10px;
 
-       /* @media (max-width: $breakpoint-tablet) {
-          font-size: 10px;
-        } */
-      }
-
-      &__starContainer {
-        display:flex;
-        gap: 10px;
-        font-size: 24px;
-
-     /*   @media (max-width: $breakpoint-tablet) {
-          display:flex;
-          gap: 5px;
-          font-size: 12px;
-        } */
+     @media (max-width: $breakpoint-tablet) {
+        font-size: 10px;
       }
     }
-  
+
+    &__starContainer {
+      display:flex;
+      gap: 10px;
+      font-size: 24px;
+
+      @media (max-width: $breakpoint-tablet) {
+        display:flex;
+        gap: 5px;
+        font-size: 12px;
+      } 
+    }
+
     &__collapsesContainer {
       display: flex;
       flex-direction: row;
