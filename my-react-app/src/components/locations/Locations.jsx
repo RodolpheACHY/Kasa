@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 // import axios from "axios";
-import Card from "./Card";
+import Card from "../card/Card";
 import styles from "./locations.module.scss"; // pour ajouter un style au container
 // import locationsData from "../data/logements.json";  Vérifie que le JSON est bien importé
 

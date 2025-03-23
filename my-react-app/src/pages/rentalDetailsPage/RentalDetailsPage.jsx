@@ -1,7 +1,7 @@
-import Header from "../components/Header";
-import Carrousel from "../components/Carrousel";
-import Footer from "../components/Footer";
-import LocationDetails from "../components/LocationDetails";
+import Header from "../../components/header/Header";
+import Carrousel from "../../components/carrousel/Carrousel";
+import Footer from "../../components/footer/Footer";
+import LocationDetails from "../../components/locationDetails/LocationDetails";
 // import data from "../data/logements.json";
 import { Navigate, useParams } from "react-router-dom";
 import PropTypes from "prop-types";

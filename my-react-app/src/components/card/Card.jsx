@@ -15,7 +15,6 @@ const Card = ({ location, onClick }) => {
   );
 };
 
-// Ajout de PropTypes pour éviter l'erreur ESLint
 Card.propTypes = {
   location: PropTypes.shape({
     id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,

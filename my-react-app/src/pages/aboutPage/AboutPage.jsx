@@ -1,8 +1,8 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
 import PropTypes from "prop-types";
-import Hero from "../components/Hero";
-import Collapse from "../components/Collapse";
+import Hero from "../../components/hero/Hero";
+import Collapse from "../../components/collapse/Collapse";
 import styles from "./aboutPage.module.scss";
 import backgroundImage from "/kalen-emsley-Bkci_8qcdvQ-unsplash_2.png"
 

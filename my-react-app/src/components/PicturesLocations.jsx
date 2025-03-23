@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Carrousel from "./Carrousel";
+import Carrousel from "./carrousel/Carrousel";
 
 const PicturesLocations = () => {
   const [logements, setLogements] = useState([]);

@@ -1,9 +1,9 @@
 //import { useParams } from "react-router-dom";
 import PropTypes from "prop-types"; // Import PropTypes
-import StarRating from "./StarRating";
-import Collapse from "./Collapse";
+import StarRating from "../starRating/StarRating";
+import Collapse from "../collapse/Collapse";
 import styles from "./locationDetails.module.scss";
-import Tags from "./Tags";
+import Tags from "../tags/Tags";
 
 const LocationDetails = ({ location }) => {
   /* const { id } = useParams(); // Récupère l'ID dans l'URL
