@@ -1,8 +1,8 @@
 @use '../styles/settings';
 
 .starContainer {
-    display: flex;      // Utilise Flexbox pour gérer l'espacement
-    gap: 10px;           // Ajoute de l'espace entre les étoiles
+    display: flex;
+    gap: 10px;
     font-size: settings.$font-size-h3;    // Ajuste la taille des étoiles
 
     @media (max-width: settings.$breakpoint-tablet) {
