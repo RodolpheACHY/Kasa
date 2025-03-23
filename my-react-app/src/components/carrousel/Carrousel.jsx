@@ -43,6 +43,9 @@ const Carrousel = ({ location }) => {
           src={pictures[currentIndex]}
           alt={`Image ${currentIndex + 1}`}
         />
+        <div className={styles.carrousel__imageCounter}>
+            {currentIndex + 1} / {pictures.length}
+        </div>
       </div>
 
       {/* Bouton suivant */}
