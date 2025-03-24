@@ -1,23 +1,12 @@
-//import { useParams } from "react-router-dom";
-import PropTypes from "prop-types"; // Import PropTypes
+import PropTypes from "prop-types";
 import StarRating from "../starRating/StarRating";
 import Collapse from "../collapse/Collapse";
 import styles from "./locationDetails.module.scss";
 import Tags from "../tags/Tags";
 
 const LocationDetails = ({ location }) => {
-  /* const { id } = useParams(); // Récupère l'ID dans l'URL
-  console.log("ID du logement :", id);
-  
-  const location = data.find((l) => l.id === id); // Cherche le logement par ID */
-
-  if (!location) {
-    return <p> Logement introuvable !!</p>
-  };
-
   return (
     <div className={styles.locationDetails}>
-      {/* <Carrousel pictures={pictures} /> */}
        <div className={styles["locationDetails__summary-group"]}>     {/* les [""] permettent de nommer notre classe avec des - */}
         <div className={styles.locationDetails__titleLocTagsContainer}>
             <h1 className={styles.locationDetails__title}>{location.title}</h1>
@@ -38,14 +27,11 @@ const LocationDetails = ({ location }) => {
         {/* Collapse pour afficher les équipements (liste) */}
         <Collapse title="Équipements" content={location.equipments} />
       </div>
-      {/* <img src={location.cover} alt={`Photo de ${location.title}`} /> */}
-      {/* <p>{location.description}</p> */}
-      {/* Ici, tu peux afficher les détails du logement en fonction de `id` */}
     </div>
   );
 }
 
-// ✅ Ajout de PropTypes pour valider les `props`
+// Ajout de PropTypes pour valider les `props`
 LocationDetails.propTypes = {
     data: PropTypes.arrayOf(PropTypes.object).isRequired,
     location: PropTypes.arrayOf(PropTypes.string).isRequired,

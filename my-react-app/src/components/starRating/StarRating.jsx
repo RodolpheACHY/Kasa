@@ -13,7 +13,7 @@ const StarRating = ({ rating, maxStars = 5 }) => {
   return <div className={styles.starContainer}>{stars}</div>;
 };
 
-// ✅ Validation des `props`
+// Validation des `props`
 StarRating.propTypes = {
   rating: PropTypes.number.isRequired,
   maxStars: PropTypes.number,

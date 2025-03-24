@@ -25,7 +25,6 @@
   }
   
   .carrousel__imageContainer {
-    // position: relative;
     width: 100%;
     height: 100%;
   }
@@ -38,15 +37,15 @@
   }
   
   .carrousel__imageCounter {
-    position: absolute; /* Positionnement absolu par rapport à carrousel__imageContainer */
-    bottom: 10px; /* Ajustez la distance depuis le bas si nécessaire */
-    left: 50%; /* Positionnement horizontal au milieu */
-    transform: translateX(-50%); /* Centrage précis */
-    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour la lisibilité */
+    position: absolute; /* Positionnement absolu par rapport à carrousel__list */
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background: rgba(0, 0, 0, 0.5); 
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
-    z-index: 1; /* Assurez-vous qu'il est au-dessus de l'image */
+    z-index: 1; 
 
     @media (max-width: settings.$breakpoint-tablet) {
       display: none;

@@ -11,9 +11,9 @@ const Tags = ({ tags }) => {
   );
 };
 
-// ✅ Validation des props
+// Validation des props
 Tags.propTypes = {
-  tags: PropTypes.arrayOf(PropTypes.string).isRequired, // ✅ Vérifie que `tags` est un tableau de strings
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired, // Vérifie que `tags` est un tableau de strings
 };
 
 export default Tags;

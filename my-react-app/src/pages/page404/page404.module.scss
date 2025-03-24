@@ -3,8 +3,8 @@
 .page404 {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; // ✅ Pleine hauteur de l'écran
-    text-align: center; // ✅ Centre le contenu
+    min-height: 100vh;
+    text-align: center; 
     justify-content: space-between;
   
     &__content {
@@ -12,7 +12,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      flex-grow: 1; // ✅ Remplit l'espace disponible
+      flex-grow: 1; 
       gap: 139px;
       margin-bottom: 139px;
       margin-top: 139px;
@@ -28,12 +28,9 @@
       color: settings.$primary-color;
       text-align: center;
       line-height: 1;
-      // font-family: Montserrat;
       font-size: 288px;
       font-style: normal;
       font-weight: settings.$font-weight-bold;
-      //line-height: 142.6%
-      // margin: 0;
 
       @media (max-width: settings.$breakpoint-tablet) {
         font-size: 96px;
@@ -53,13 +50,11 @@
     }
   
     &__link {
-      //text-decoration: none;
-      //font-size: 1.2rem;
       color: settings.$black;
       font-size: settings.$font-size-h4;
       font-style: normal;
       font-weight: settings.$font-weight-regular;
-      line-height: 142.6%; /* 25.668px */
+      line-height: 142.6%;
       text-decoration-line: underline;
       text-decoration-style: solid;
       text-decoration-skip-ink: none;
@@ -70,7 +65,7 @@
   
       &:hover {
         text-decoration: underline;
-        color: #e04444; // ✅ Légère variation au survol
+        color: #e04444;
       }
     }
   }

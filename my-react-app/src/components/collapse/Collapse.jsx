@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { FaChevronUp } from "react-icons/fa"; // Icônes pour l'effet d'ouverture/fermeture
-import styles from "./collapse.module.scss"; // Assure-toi d'avoir un fichier SCSS
+import { FaChevronUp } from "react-icons/fa";
+import styles from "./collapse.module.scss"; 
 
 const Collapse = ({ title, content, width, customClass }) => {
   const [isOpen, setIsOpen] = useState(false); 
@@ -12,15 +12,8 @@ const Collapse = ({ title, content, width, customClass }) => {
       style={{ width }}   // Applique la largeur dynamique
     >
       {/* Bouton d’ouverture/fermeture */}
-       {/* <div className={styles.collapse__button}> 
-       
-        <button onClick={() => setIsOpen(!isOpen)} className={styles.collapse__arrow}>
-            {isOpen ? <FaChevronDown /> :  <FaChevronUp /> }
-        </button>
-      </div>   */}
       <button
         className={styles.collapse__button}
-        //onClick={() => setIsOpen(!isOpen)}
       >
         <span className={styles.collapse__title}>{title}</span>  
 
@@ -55,15 +48,15 @@ const Collapse = ({ title, content, width, customClass }) => {
   );
 };
 
-// ✅ Validation des `props`
+// Validation des `props`
 Collapse.propTypes = {
-  title: PropTypes.string.isRequired, // ✅ Le titre est obligatoire et doit être une string
-  content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired, // ✅ Peut être une string ou un tableau
-  width: PropTypes.string, // ✅ Personnalise la hauteur max
-  customClass: PropTypes.string, // ✅ Classe CSS personnalisée
+  title: PropTypes.string.isRequired, // Le titre est obligatoire et doit être une string
+  content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired, // Peut être une string ou un tableau
+  width: PropTypes.string, // Personnalise la hauteur max
+  customClass: PropTypes.string, // Classe CSS personnalisée
 };
 
-// ✅ Valeurs par défaut
+// Valeurs par défaut
 Collapse.defaultProps = {
     width: "100%",
     customClass: "",

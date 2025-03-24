@@ -1,9 +1,8 @@
+import { Navigate, useParams } from "react-router-dom";
 import Header from "../../components/header/Header";
 import Carrousel from "../../components/carrousel/Carrousel";
 import Footer from "../../components/footer/Footer";
 import LocationDetails from "../../components/locationDetails/LocationDetails";
-// import data from "../data/logements.json";
-import { Navigate, useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const RentalDetailsPage = ({data}) => {
@@ -29,7 +28,7 @@ const RentalDetailsPage = ({data}) => {
 RentalDetailsPage.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired, // Vérifie que `id` est bien une string
+      id: PropTypes.string.isRequired, // Vérifie que `id` est bien une string et il est obligatoire
     })
   ).isRequired,
 };
