@@ -33,7 +33,6 @@ const LocationDetails = ({ location }) => {
 
 // Ajout de PropTypes pour valider les `props`
 LocationDetails.propTypes = {
-    data: PropTypes.arrayOf(PropTypes.object).isRequired,
     location: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 

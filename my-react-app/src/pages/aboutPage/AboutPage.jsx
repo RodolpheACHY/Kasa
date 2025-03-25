@@ -1,6 +1,6 @@
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import Hero from "../../components/hero/Hero";
 import Collapse from "../../components/collapse/Collapse";
 import styles from "./aboutPage.module.scss";
@@ -51,9 +51,9 @@ const AboutPage = () => {
   );
 };
 
-AboutPage.propTypes = {
+/* AboutPage.propTypes = {
   backgroundImage: PropTypes.string,
   className: PropTypes.string,
-};
+}; */
 
 export default AboutPage;

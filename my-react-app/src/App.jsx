@@ -1,11 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
 import HomePage from "./pages/homePage/HomePage";
 import AboutPage from "./pages/aboutPage/AboutPage";
 import Page404 from "./pages/page404/Page404";
 import RentalDetailsPage from "./pages/rentalDetailsPage/RentalDetailsPage";
 import data from "./data/logements.json";
-
 
 function App() {
   return (

@@ -8,6 +8,7 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 50px;
 
     @media (max-width: settings.$breakpoint-tablet) {
       padding-bottom: 27px;
@@ -75,7 +76,7 @@
       font-size: settings.$font-size-h4;
       font-style: normal;
       font-weight: settings.$font-weight-regular;
-      max-width: 70px;
+      max-width: 80px;
 
       @media (max-width: settings.$breakpoint-tablet) {
         font-size: settings.$font-size-h6;

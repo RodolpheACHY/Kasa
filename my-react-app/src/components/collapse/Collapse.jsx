@@ -12,19 +12,27 @@ const Collapse = ({ title, content, width, customClass }) => {
       style={{ width }}   // Applique la largeur dynamique
     >
       {/* Bouton d’ouverture/fermeture */}
-      <button
+      <div
         className={styles.collapse__button}
       >
         <span className={styles.collapse__title}>{title}</span>  
 
-        {/* ✅ Un seul Chevron avec rotation dynamique */}
+        {/* Un seul Chevron avec rotation dynamique */}
         <FaChevronUp
           className={`${styles.collapse__arrow} ${
             isOpen ? styles["collapse__arrow--open"] : "" 
           }`}
           onClick={() => setIsOpen(!isOpen)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              setIsOpen(!isOpen);
+            }
+          }}
+          tabIndex={0}
+          aria-label="Affiche ou masque le détail"
+          role="button"
         />
-      </button>
+      </div>
 
 
       {/* Contenu qui apparaît quand isOpen = true */}

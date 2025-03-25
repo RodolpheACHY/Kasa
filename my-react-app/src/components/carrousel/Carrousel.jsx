@@ -17,7 +17,7 @@ const Carrousel = ({ location }) => {
   // Fonction pour gérer le clic sur les flèches
   const handleClick = (direction) => {
 
-    if (!showNavigation) return;
+    if (!showNavigation) return;  // Si une seule image (car false), on sort de la fonction
 
     setCurrentIndex((prevIndex) => {
       let newIndex = direction === "next" ? prevIndex + 1 : prevIndex - 1;
@@ -72,7 +72,7 @@ Carrousel.propTypes = {
   location: PropTypes.shape({
     pictures: PropTypes.arrayOf(PropTypes.string).isRequired, // Vérifie que `pictures` est un tableau de strings
   }).isRequired,
-  data: PropTypes.array.isRequired,
+  // data: PropTypes.array.isRequired,
 };
 
 export default Carrousel;
