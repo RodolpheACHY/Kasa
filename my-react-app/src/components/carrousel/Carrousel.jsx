@@ -72,7 +72,6 @@ Carrousel.propTypes = {
   location: PropTypes.shape({
     pictures: PropTypes.arrayOf(PropTypes.string).isRequired, // Vérifie que `pictures` est un tableau de strings
   }).isRequired,
-  // data: PropTypes.array.isRequired,
 };
 
 export default Carrousel;
