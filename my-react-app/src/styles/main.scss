@@ -1,5 +1,5 @@
-@import "./settings" ;
-@import "./global";
+@use "./settings" ;
+@use "./global";
 
 :root {
     --main-font: 'Montserrat', sans-serif;
@@ -13,7 +13,7 @@
 }
 
 body {
-    background: $secondary-color;
+    background: settings.$secondary-color;
     font-family: var(--main-font);
     overflow-x: hidden;
 }
