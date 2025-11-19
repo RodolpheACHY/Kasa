@@ -85,7 +85,7 @@ L’objectif du projet était de reproduire fidèlement les maquettes Figma et d
 Clone le projet :
 
 ```
-git clone https://github.com/ton-repo/kasa.git
+git clone https://github.com/RodolpheACHY/Kasa.git
 cd kasa
 ```
 
