@@ -1,0 +1,25 @@
+@use '../../styles/settings';
+
+.tagsContainer {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-start;  // Alignement naturel à gauche
+
+    @media (max-width: settings.$breakpoint-tablet) {
+        margin-bottom: 10px;
+    }
+  }
+  
+  .tag {
+    background-color: settings.$primary-color;
+    color: settings.$secondary-color;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: settings.$font-size-h5;
+    max-width: 200px;
+
+    @media (max-width: settings.$breakpoint-tablet) {
+        font-size: settings.$font-size-body;
+    }
+  }

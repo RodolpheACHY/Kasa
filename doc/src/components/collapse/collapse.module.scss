@@ -1,0 +1,99 @@
+@use '../../styles/settings';
+// Conteneur des collapses
+.collapse {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 100%; // Les collapses prennent toute la largeur du parent
+    color: settings.$black;
+  
+    &__button {
+      width: 100%; // Prend toute la largeur du conteneur
+      background-color: settings.$primary-color;
+      border: none;
+      color: #fff;
+      padding: 10px;
+      font-size: settings.$font-size-h4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      border-radius: 10px;
+   
+      &:focus, &:focus-visible {
+        outline: none;
+      } 
+
+      @media (max-width: settings.$breakpoint-tablet) {
+        border-radius: 5px;
+      }
+    }  
+  
+    // Animation Slide Down
+    &__content {
+      background: var(--Gray, rgba(246, 246, 246, 0.45));
+      border-radius: 5px;
+      overflow: hidden;
+      transition: max-height 0.6s ease-in-out;
+      max-height: 0; // Contenu initialement caché
+      height: 200px;
+    
+      // Quand le contenu est visible
+      &--open {
+        max-height: fit-content;
+      }
+    }
+
+    &__text {
+        padding: 0 20px;
+        transform: translateY(-100%); // Le contenu est légèrement décalé vers le haut
+        transition: max-height 0.6s ease-out, padding 0.6s ease-out;
+
+        .collapse__content--open & {
+            transform: translateY(0);
+            padding: 10px 20px;
+            text-align: left;
+        }
+
+        @media (max-width: settings.$breakpoint-tablet) {
+            font-size: settings.$font-size-h6;
+        }
+    }
+
+    &__title {
+        font-size: settings.$font-size-h4;
+        color: settings.$secondary-color;
+        font-style: normal;
+        font-weight: settings.$font-weight-bold;
+
+        @media (max-width: settings.$breakpoint-tablet) {
+            font-size: 13px;
+        }
+    }
+
+    &__arrow {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0px;
+        color: settings.$secondary-color;
+        font-size: settings.$font-size-h3; // Ajuste la taille de l'icône
+        transition: transform 0.5s ease; 
+        &--open {
+            transform: rotate(180deg); // Rotation complète vers le bas
+        }
+        &--closed {
+            transform: rotate(0deg); // Position initiale
+        }
+
+        @media (max-width: settings.$breakpoint-tablet) {
+            font-size: settings.$font-size-h5;
+        }
+    }
+  
+    ul {
+      list-style-type: none;
+      text-align: left;
+    }
+}
