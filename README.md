@@ -1,4 +1,4 @@
- 🏡 Kasa — Application de location immobilière (React & React Router)
+# 🏡 projet Kasa — Application de location immobilière (React & React Router)
 
 Kasa est une application front-end développée avec **React**, **React Router** et **SASS**, permettant d’afficher des annonces de logements de manière dynamique.  
 L’objectif du projet était de reproduire fidèlement les maquettes Figma et de construire une interface fluide, moderne et responsive.
