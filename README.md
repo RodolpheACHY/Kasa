@@ -42,15 +42,34 @@ L’objectif du projet était de reproduire fidèlement les maquettes Figma et d
 
 ```
 /
-│── public/
-│── src/
-│ ├── components/
-│ ├── pages/
-│ ├── data/
-│ ├── styles/
-│ ├── App.jsx
-│ └── main.jsx
-└── package.json
+│── README.md
+│── .vscode
+└── my-react-app/
+       │── src/
+       |    ├── assets/
+       |    ├── components/
+       |    |      ├── card/
+       |    |      ├── caroussel/
+       |    |      ├── collapse/
+       |    |      ├── footer/
+       |    |      ├── header/
+       |    |      ├── hero/
+       |    |      ├── locations/
+       |    |      ├── locationDetails/
+       |    |      └── ... 
+       |    ├── data/
+       |    ├── pages/
+       |    ├── styles/
+       |    ├── App.jsx
+       |    ├── index.css
+       |    └── main.jsx
+       │── public/
+       │── README.md
+       │── eslint.config.js
+       │── index.html
+       │── package-lock.json
+       │── vite.config.js
+       └── package.json
 ```
 
 ---
