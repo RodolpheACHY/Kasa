@@ -75,7 +75,8 @@ L’objectif du projet était de reproduire fidèlement les maquettes Figma et d
 
 ## 📸 Aperçu
 
-<img width="1866" height="942" alt="image" src="https://github.com/user-attachments/assets/12c6d5e2-b3f2-40e4-ae84-a4c0eee27944" />
+<img width="1182" height="942" alt="thumb9" src="https://github.com/user-attachments/assets/429fc70c-2390-4596-82c4-e6cd5fc66ae7" />
+
 
 ---
 
