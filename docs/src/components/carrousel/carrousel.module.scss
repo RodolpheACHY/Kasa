@@ -1,0 +1,89 @@
+@use '../../styles/settings';
+
+.carrousel {
+    position: relative;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    width:90%;
+
+    @media (max-width: settings.$breakpoint-tablet) {
+        border-radius: 10px;
+        height: 255px;
+    }
+  }
+  
+  .carrousel__list {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .carrousel__imageContainer {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carrousel__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .carrousel__imageCounter {
+    position: absolute; /* Positionnement absolu par rapport à carrousel__list */
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background: rgba(0, 0, 0, 0.5); 
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 1; 
+
+    @media (max-width: settings.$breakpoint-tablet) {
+      display: none;
+  }
+
+
+  }
+
+  .carrousel__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: settings.$secondary-color;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 2rem;
+    transition: 0.3s;
+  
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    @media (max-width: settings.$breakpoint-tablet) {
+        font-size: 1rem;
+
+        img { // Cible l'élément img qui contient notre SVG
+            width: 1rem; // Modifier la largeur
+            height: 1rem; // Modifier la hauteur
+        }
+    }
+  }
+  
+  .carrousel__arrow:first-of-type {
+    left: 10px;
+  }
+  
+  .carrousel__arrow:last-of-type {
+    right: 10px;
+  }

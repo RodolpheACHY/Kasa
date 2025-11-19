@@ -1,0 +1,33 @@
+@use '../../styles/settings';
+
+.container_locations {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    @media (max-width: settings.$breakpoint-tablet) {
+        margin-bottom: 27px;
+    }
+
+    &__locations {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+        list-style: none;
+        padding: 56px 20px 43px;
+        background-color: settings.$cards-container-background-color;
+        border-radius: 25px;
+        justify-content: center;
+        width: 90%;
+
+        @media (max-width: settings.$breakpoint-tablet) {
+            background-color: transparent;
+            width: 100%;
+            gap: 20px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+            padding: 0;
+            
+        }
+    }
+}
