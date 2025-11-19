@@ -64,7 +64,6 @@ L’objectif du projet était de reproduire fidèlement les maquettes Figma et d
        |    ├── index.css
        |    └── main.jsx
        │── public/
-       │── README.md
        │── eslint.config.js
        │── index.html
        │── package-lock.json
